@@ -15,11 +15,10 @@ interface NewsInterface {
         @Query("apiKey") apiKey: String = Constants.API_KEY
     ): Response<NewsResponse>
 
+    @GET("/v2/top-headlines")
     suspend fun getHeadlines(
         @Query("country") country: String = "ru",
-        @Query("page") page: String,
+        @Query("page") page: Int,
         @Query("apiKey") apiKey: String = Constants.API_KEY
     ) : Response<NewsResponse>
-
-
 }
