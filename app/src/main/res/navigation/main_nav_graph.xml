@@ -9,7 +9,11 @@
         android:id="@+id/detailsFragment"
         android:name="ru.dyrelosh.newsapp.ui.details.DetailsFragment"
         android:label="fragment_details"
-        tools:layout="@layout/fragment_details" />
+        tools:layout="@layout/fragment_details" >
+        <argument
+            android:name="article"
+            app:argType="ru.dyrelosh.newsapp.models.Article" />
+    </fragment>
     <fragment
         android:id="@+id/favouriteFragment"
         android:name="ru.dyrelosh.newsapp.ui.favourite.FavouriteFragment"
